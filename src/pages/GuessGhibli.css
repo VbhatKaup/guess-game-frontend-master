@@ -1,0 +1,139 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.guess-ghibli-container {
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* Ensure images stay in one row */
+  gap: 20px; /* Adds horizontal space between images */
+  margin: 5px 0;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+/* Shared styling for all images */
+.image {
+  width: 80%; /* Ensures the image is responsive */
+  max-width: 250px; /* Maximum width for images */
+  height: auto;
+  max-height: 50vh; /* Ensures the image doesn't exceed half the screen */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+/* Additional class for quiz images, making sure they follow the same styling */
+.quiz-image {
+  max-height: 50vh; /* Makes sure the quiz image height is controlled like Ghibli images */
+}
+
+/* Hover effect remains the same */
+.image:hover {
+  transform: scale(1.05);
+}
+
+.input-section {
+  margin-top: 10px;
+}
+
+.input-section input {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+}
+
+.input-section button {
+  padding: 8px 16px;
+  font-size: 16px;
+  margin-left: 10px;
+  border: none;
+  background-color: #0077ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  background-color: #005ddd;
+}
+
+.result-section {
+  margin-top: 15px;
+  margin : 5px;
+}
+
+.result-section button {
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.result-section button:hover {
+  background-color: #218838;
+}
+
+.feedback {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.loading {
+  text-align: center;
+  font-size: 22px;
+  padding: 50px;
+}
+
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.login-screen input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-screen button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
